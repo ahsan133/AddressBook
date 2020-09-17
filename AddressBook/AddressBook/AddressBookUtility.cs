@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace AddressBook
 {
@@ -8,7 +7,7 @@ namespace AddressBook
         public void Utility()
         {
             Console.WriteLine("Enter the operation");
-            Console.WriteLine("1.Add Person \n2.Edit person \n3.Delete person \n4.Sort Address book");
+            Console.WriteLine("1.Add Person \n2.Edit person \n3.Delete person \n4.Sort Address book \n5.View person by city");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             Collection collection = new Collection();
@@ -27,6 +26,9 @@ namespace AddressBook
                 case 4:
                     SortAddressBook();
                     break;
+                case 5:
+                    collection.ViewPersonByCity();
+                    break;              
                 default:
                     break;
             }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,6 +7,7 @@ namespace AddressBook
     public class Collection
     {
         private static List<Person> list = new List<Person>();
+
         public void AddPerson()
         {
             Person person = new Person();
@@ -147,6 +147,20 @@ namespace AddressBook
         public void SortAddressBookByZip()
         {
             list = list.OrderBy(x => x.Zip).ToList();
+        }
+
+        public void ViewPersonByCity()
+        {
+            Console.WriteLine("Enter city");
+            string city = Console.ReadLine();
+            Console.WriteLine("names :");
+            foreach (var entry in list)
+            {
+                if(entry.City == city)
+                {
+                    Console.WriteLine("\n"+entry.FirstName +" "+ entry.LastName );
+                }
+            }
         }
     }
 }
