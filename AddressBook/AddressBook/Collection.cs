@@ -162,5 +162,19 @@ namespace AddressBook
                 }
             }
         }
+
+        public void ViewPersonByState()
+        {
+            Console.WriteLine("Enter state");
+            string state = Console.ReadLine();
+            Console.WriteLine("names :");
+            foreach (var entry in list)
+            {
+                if (entry.State == state)
+                {
+                    Console.WriteLine("\n" + entry.FirstName + " " + entry.LastName);
+                }
+            }
+        }
     }
 }
