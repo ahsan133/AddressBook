@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AddressBook
 {
-    public class AddressBookOperation
+    public class Collection
     {
         private static List<Person> list = new List<Person>();
         public void AddPerson()
