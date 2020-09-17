@@ -138,5 +138,10 @@ namespace AddressBook
         {
             list = list.OrderBy(x => x.City).ToList();
         }
+
+        public void SortAddressBookByState()
+        {
+            list = list.OrderBy(x => x.State).ToList();
+        }
     }
 }
