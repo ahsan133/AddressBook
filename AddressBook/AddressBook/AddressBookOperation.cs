@@ -72,6 +72,24 @@ namespace AddressBook
             }
         }
 
+        public void DeletePerson()
+        {
+            Console.WriteLine("Enter full name of person to delete");
+            string fullName = Console.ReadLine();
+            string[] name = fullName.Split(" ");
+            int count = 0;
+            foreach (var entry in list)
+            {
+                if (entry.FirstName == name[0] && entry.LastName == name[1])
+                {
+                    break;
+                }
+                count++;
+            }
+
+            list.Remove(list[count]);
+        }
+
         public void PrintAddressBook()
         {
             Console.WriteLine("\nAddress Book : \n");
