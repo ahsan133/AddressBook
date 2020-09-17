@@ -24,7 +24,26 @@ namespace AddressBook
             Console.WriteLine("Enter phone number");
             person.PhoneNumber = Convert.ToInt64(Console.ReadLine());
 
-            list.Add(person);
+            if(Search(person.FirstName,person.LastName).Equals("duplicate"))
+            {
+                Console.WriteLine("\nname already exist");
+            }
+            else
+            {
+                list.Add(person);
+            }
+        }
+
+        public string Search(string firstName, string lastName)
+        {
+            foreach (var entry in list)
+            {
+                if (entry.FirstName == firstName && entry.LastName == lastName)
+                {
+                    return "duplicate";
+                }
+            }
+            return "different";
         }
 
         public void EditPerson()
