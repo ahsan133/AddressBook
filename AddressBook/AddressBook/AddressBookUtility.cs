@@ -35,7 +35,7 @@ namespace AddressBook
 
         public void SortAddressBook()
         {
-            Console.WriteLine("1.Sort by name \n2.Sort by city \n3.Sort by state");
+            Console.WriteLine("1.Sort by name \n2.Sort by city \n3.Sort by state \n4. Sort by Zip code");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             Collection collection = new Collection();
@@ -50,6 +50,9 @@ namespace AddressBook
                     break;
                 case 3:
                     collection.SortAddressBookByState();
+                    break;
+                case 4:
+                    collection.SortAddressBookByZip();
                     break;
                 default:
                     break;

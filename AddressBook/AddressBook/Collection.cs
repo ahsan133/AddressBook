@@ -143,5 +143,10 @@ namespace AddressBook
         {
             list = list.OrderBy(x => x.State).ToList();
         }
+
+        public void SortAddressBookByZip()
+        {
+            list = list.OrderBy(x => x.Zip).ToList();
+        }
     }
 }
