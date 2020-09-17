@@ -8,7 +8,7 @@ namespace AddressBook
         public void Utility()
         {
             Console.WriteLine("Enter the operation");
-            Console.WriteLine("1.Add Person");
+            Console.WriteLine("1.Add Person \n2.Edit person");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             AddressBookOperation operation = new AddressBookOperation();
@@ -17,6 +17,9 @@ namespace AddressBook
             {
                 case 1:
                     operation.AddPerson();
+                    break;
+                case 2:
+                    operation.EditPerson();
                     break;
             }
             operation.PrintAddressBook();
