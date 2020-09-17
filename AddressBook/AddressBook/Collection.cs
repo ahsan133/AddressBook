@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace AddressBook
 {
@@ -126,5 +128,10 @@ namespace AddressBook
 
             new AddressBookUtility().Utility();
         }
+
+        public void SortAddressBookByName()
+        {
+            list = list.OrderBy(x => x.FirstName).ThenBy(x => x.LastName).ToList();
+        }                                                                                                                                                 
     }
 }

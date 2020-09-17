@@ -8,7 +8,7 @@ namespace AddressBook
         public void Utility()
         {
             Console.WriteLine("Enter the operation");
-            Console.WriteLine("1.Add Person \n2.Edit person \n3.Delete person");
+            Console.WriteLine("1.Add Person \n2.Edit person \n3.Delete person \n4.Sort by name");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             Collection collection = new Collection();
@@ -23,6 +23,9 @@ namespace AddressBook
                     break;
                 case 3:
                     collection.DeletePerson();
+                    break;
+                case 4:
+                    collection.SortAddressBookByName();
                     break;
             }
             collection.PrintAddressBook();
