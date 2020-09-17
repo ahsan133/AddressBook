@@ -132,6 +132,11 @@ namespace AddressBook
         public void SortAddressBookByName()
         {
             list = list.OrderBy(x => x.FirstName).ThenBy(x => x.LastName).ToList();
-        }                                                                                                                                                 
+        }      
+        
+        public void SortAddressBookByCity()
+        {
+            list = list.OrderBy(x => x.City).ToList();
+        }
     }
 }
