@@ -160,6 +160,10 @@ namespace AddressBook
                 {
                     Console.WriteLine("\n"+entry.FirstName +" "+ entry.LastName );
                 }
+                else
+                {
+                    Console.WriteLine("person not found");
+                }
             }
         }
 
@@ -173,6 +177,30 @@ namespace AddressBook
                 if (entry.State == state)
                 {
                     Console.WriteLine("\n" + entry.FirstName + " " + entry.LastName);
+                }
+                else
+                {
+                    Console.WriteLine("person not found");
+                }
+            }
+        }
+
+        public void SearchPerson()
+        {
+            Console.WriteLine("Enter full name of person to search");
+            string fullName = Console.ReadLine();
+            string[] name = fullName.Split(" ");
+            foreach(var entry in list)
+            {
+                if(entry.FirstName == name[0] && entry.LastName == name[1])
+                {
+                    Console.WriteLine("First name : " + entry.FirstName + "\nLast name : " + entry.LastName + 
+                        "\nAddress : " + entry.Address + "\nCity : " + entry.City + "\nState : " + 
+                        entry.State + "\nZip code : " + entry.Zip + "\nPhone Number : " + entry.PhoneNumber);
+                }
+                else
+                {
+                    Console.WriteLine("person not found");
                 }
             }
         }

@@ -8,7 +8,7 @@ namespace AddressBook
         {
             Console.WriteLine("Enter the operation");
             Console.WriteLine("1.Add Person \n2.Edit person \n3.Delete person \n4.Sort Address book \n5.View person by city \n" +
-                "6.view person by state");
+                "6.view person by state \n7.Search person ");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             Collection collection = new Collection();
@@ -32,6 +32,9 @@ namespace AddressBook
                     break;
                 case 6:
                     collection.ViewPersonByState();
+                    break;
+                case 7:
+                    collection.SearchPerson();
                     break;
                 default:
                     break;
